@@ -1,0 +1,70 @@
+{
+  "users": [
+    {
+      "userName": "vivt1",
+      "id": "US001"
+    },
+    {
+      "id": "US002",
+      "useName": "Nobi Nobita"
+    },
+    {
+      "userName": "vivt3",
+      "id": "US003"
+    },
+    {
+      "userName": "vivt bla bla",
+      "id": "O63abmY"
+    },
+    {
+      "userName": "vivt test",
+      "id": "AMB3J_g"
+    },
+    {
+      "id": "jNrkUKf"
+    }
+  ],
+  "posts": [
+    {
+      "id": "PS001",
+      "content": "Nội dung học về JSON Server!",
+      "userId": "US001"
+    },
+    {
+      "id": "PS002",
+      "content": "Nội dung học về JSON Server!",
+      "userId": "US001"
+    },
+    {
+      "id": "PS003",
+      "content": "Nội dung học về JSON Server!",
+      "userId": "US001"
+    }
+  ],
+  "comments": [
+    {
+      "id": "CMT001",
+      "postId": "PS001",
+      "content": "Bài học này rất ý nghĩa! Cảm ơn MindX!",
+      "userId": "US002"
+    },
+    {
+      "id": "CMT002",
+      "postId": "PS001",
+      "content": "Bài học này rất ý nghĩa! Cảm ơn MindX!",
+      "userId": "US002"
+    },
+    {
+      "id": "CMT003",
+      "postId": "PS001",
+      "content": "Bài học này rất ý nghĩa! Cảm ơn MindX!",
+      "userId": "US002"
+    },
+    {
+      "id": "CMT004",
+      "postId": "PS001",
+      "content": "Bài học này rất ý nghĩa! Cảm ơn MindX!",
+      "userId": "US002"
+    }
+  ]
+}
