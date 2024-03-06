@@ -39,6 +39,11 @@
       "id": "PS003",
       "content": "Nội dung học về JSON Server!",
       "userId": "US001"
+    },
+    {
+      "id": "PS52461",
+      "content": "bai post moi",
+      "userId": "US002"
     }
   ],
   "comments": [

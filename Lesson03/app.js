@@ -212,8 +212,12 @@ app.get('/posts/:postId/comments', async (req, res) => {
 app.get('/posts/comments', async (req, res) => {
     let status = 500;
     try {
+        const {cmtLimit} = req.query || {};
         // get all posts.
         const posts = await axios.get(`http://localhost:3000/posts?_embed=comments`);
+        posts.data.map(post => {
+            post.comments = post.comments.slice(0, cmtLimit)
+        })
         return res.status(200).json({
             data: posts.data,
             msg: 'Get successfully!'
