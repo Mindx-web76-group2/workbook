@@ -13,6 +13,7 @@ app.post('/users', async (req, res) => {
             status = 400;
             throw new Error('User name is required!');
         }
+        // const findUser = users.find(u.userName === userName);
         // check if user name is existed.
         const existedUser = await axios.get(`http://localhost:3000/users?userName=${userName}`);
         if (existedUser && existedUser.data.length > 0) {
@@ -20,6 +21,7 @@ app.post('/users', async (req, res) => {
             throw new Error('User name is existed!');
         } 
         // create new user.
+        // users.push()
         const newUser = await axios.post(`http://localhost:3000/users`, {
             id: 'US' + Math.floor(Math.random() * 10000) + 1,
             userName
@@ -84,6 +86,7 @@ app.put('/posts/:postId', async (req, res) => {
             throw new Error('User is not found!');
         }
         // check if post is existed and user is the owner
+        // const find = posts.find(p.postId === postId && p.userId === userId);
         const existedPost = await axios.get(`http://localhost:3000/posts/${postId}?userId=${userId}`);
         if (!existedPost) {
             status = 404;
@@ -216,7 +219,7 @@ app.get('/posts/comments', async (req, res) => {
         // get all posts.
         const posts = await axios.get(`http://localhost:3000/posts?_embed=comments`);
         posts.data.map(post => {
-            post.comments = post.comments.slice(0, cmtLimit)
+            post.comments = post.comments.slice(0, parseInt(cmtLimit))
         })
         return res.status(200).json({
             data: posts.data,
