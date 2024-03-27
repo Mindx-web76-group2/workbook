@@ -1,9 +1,8 @@
-import mongoose from'mongoose';
-import 'dotenv/config';
-
+// getting-started.js
+const mongoose = require('mongoose');
 
 const uri = `mongodb+srv://vivt_mindx_web76:${process.env.MONGODB_PWD}@web76cluster.ttoub03.mongodb.net/${process.env.MONGODB_DB_NAME}?retryWrites=true&w=majority&appName=web76cluster`;
-export const connectDB = async () => {
+const connectDB = async () => {
     try {
         await mongoose.connect(uri);
         console.log('Connected to database successfully');
@@ -11,3 +10,9 @@ export const connectDB = async () => {
         console.log(error.message)
     }
 }
+
+
+module.exports = {
+    connectDB
+}
+
